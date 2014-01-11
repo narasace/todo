@@ -1,0 +1,15 @@
+extends ../layout
+
+block content
+
+  h1 New Task View
+
+  form(method='post', action='/tasks')
+    fieldset
+      legend Add a task
+        div.form-group
+          label Task
+          input.form-control(name='task[task]', class='xlarge')
+        button.btn.btn-primary(type='submit') Save
+        button.btn.btn-default(type='reset') Reset
+        button.btn.btn-default(type='submit', onclick="window.location='/tasks';") Back
